@@ -2,19 +2,21 @@ using System;
 using Data;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 namespace Models.MapModels
 {
     public class Asteroids : MonoBehaviour, IModel
     {
-        [SerializeField] private LevelProps _props;
+        [FormerlySerializedAs("_props")] [SerializeField] public LevelProps props;
         private GameObject _model;
 
 
-        public void Initilize(int index, Vector3 scale, Vector3 position)
+        public void Initilize(Vector3 scale, Vector3 position)
         {
-            _model = Object.Instantiate(_props.asteroids [index]); 
+            _model = Object.Instantiate(props.asteroids[(int)Random.Range(0, props.asteroids.Count-1)]); 
             _model.transform.localScale = scale;
             _model.transform.position = position;
         }
@@ -27,7 +29,7 @@ namespace Models.MapModels
         }
         public int CountObject()
         {
-            return _props.asteroids.Count;
+            return props.asteroids.Count;
         }
     }
 }

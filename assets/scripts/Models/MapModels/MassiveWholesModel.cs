@@ -9,14 +9,14 @@ namespace Models.MapModels
     public class MassiveWholesModel : MonoBehaviour, IModel
     {
         [FormerlySerializedAs("_props")] [SerializeField]
-        private LevelProps props;
+        public LevelProps props;
         private GameObject _model;
 
 
         
-        public void Initilize(int index, Vector3 scale, [CanBeNull]Vector3 position)
+        public void Initilize(Vector3 scale, [CanBeNull]Vector3 position)
         {
-            _model = Instantiate(props.massiveObjects[index], position, Quaternion.identity); 
+            _model = Instantiate(props.massiveObjectsWholes[(int)Random.Range(0, props.massiveObjectsWholes.Count-1)], position, Quaternion.identity); 
             _model.transform.localScale = scale;
             _model.transform.position = position;
         } 

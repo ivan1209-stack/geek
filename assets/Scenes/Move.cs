@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+/* public class Move : MonoBehaviour
 {
     private Walkyrie_SwitchEngine_01 Walkyrie_SwitchEngine;
     private Vector3 direction;
@@ -77,4 +77,4 @@ public class Move : MonoBehaviour
     private IEnumerator Timer(float time) {
         yield return new WaitForSeconds(time);
     }
-}
+} */

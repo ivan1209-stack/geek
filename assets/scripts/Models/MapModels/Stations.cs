@@ -1,19 +1,20 @@
 using Data;
 using Interfaces;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Models.MapModels
 {
     public class Stations : MonoBehaviour, IModel
     {
-        [SerializeField] private LevelProps _props;
+        [FormerlySerializedAs("_props")] [SerializeField] public LevelProps props;
         private GameObject _model;
         private Rigidbody _rigidBody;
 
 
-        public void Initilize(int index, Vector3 scale, Vector3 position)
+        public void Initilize(Vector3 scale, Vector3 position)
         {
-            _model = Object.Instantiate(_props.stations[index]);
+            _model = Object.Instantiate(props.stations[(int)Random.Range(0, props.stations.Count-1)]);
             _rigidBody = _model.AddComponent<Rigidbody>();
             _model.transform.localScale = scale;
             _model.transform.position = position;
@@ -38,7 +39,7 @@ namespace Models.MapModels
         }
         public int CountObject()
         {
-            return _props.stations.Count;
+            return props.stations.Count;
         }
     }
 }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05d64ece2764fcca3c0d04437b601a9, type: 3}
+  m_Name: levelProps
+  m_EditorClassIdentifier: 
+  planets:
+  - {fileID: 1789615838080712, guid: 64ae3a07f5b2b40449a3e4eb3c1804ca, type: 3}
+  - {fileID: 1789615838080712, guid: 64ae3a07f5b2b40449a3e4eb3c1804ca, type: 3}
+  - {fileID: 1789615838080712, guid: 64ae3a07f5b2b40449a3e4eb3c1804ca, type: 3}
+  asteroids:
+  - {fileID: 1799160012814618, guid: f60e024907e0c014bbd68a3e3631a6eb, type: 3}
+  massiveObjects:
+  - {fileID: 112406, guid: 9a1096a62ee865344a0549a465aa2f3e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  massiveObjectsWholes: []
+  stations:
+  - {fileID: 1894442630516658, guid: 00cbbb3475b1b0640a802c21a905203b, type: 3}
+  - {fileID: 1152689187702200, guid: 9e8f504eea9c75f4c855f7bff7ff5903, type: 3}
+  - {fileID: 1894442630516658, guid: 00cbbb3475b1b0640a802c21a905203b, type: 3}
